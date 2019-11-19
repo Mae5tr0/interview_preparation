@@ -1,5 +1,6 @@
 package structures;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -29,6 +30,13 @@ public class LinkedList<E> implements Iterable<E> {
     public LinkedList() {
     }
 
+    public LinkedList(Collection<E> c) {
+        this();
+        for (E el : c) {
+            this.addLast(el);
+        }
+    }
+
     /**
      * Tells if the list is empty
      *
@@ -48,9 +56,35 @@ public class LinkedList<E> implements Iterable<E> {
     }
 
     /**
-     * Appends the specified element to the end of this list.
+     * Returns node in kth position. Required for some algorithms, which want to work with linked list internally
      *
-     * <p>This method is equivalent to {@link #add}.
+     * @param k position
+     * @return {@code Node}  Node in kth position
+     * @throws IllegalArgumentException unless {@code 0 < K < size }
+     */
+
+    public Node<E> getNode(int k) {
+        if (k < 0 || k >= size) throw new IllegalArgumentException("argument must be between 0 and " + (size - 1));
+        Node<E> result = first;
+
+        while (k > 0) {
+            result = result.next;
+            k--;
+        }
+        return result;
+    }
+
+    /**
+     * Returns the number of elements in this list.
+     *
+     * @return the number of elements in this list
+     */
+    public int length() {
+        return size;
+    }
+
+    /**
+     * Appends the specified element to the end of this list.
      *
      * @param e the element to add
      */
@@ -154,15 +188,21 @@ public class LinkedList<E> implements Iterable<E> {
         size = 0;
     }
 
-    private static class Node<E> {
-        E item;
-        Node<E> next;
-        Node<E> prev;
+    public static class Node<E> {
+        public E item;
+        public Node<E> next;
+        public Node<E> prev;
 
         Node(E item, Node<E> next, Node<E> prev) {
             this.item = item;
             this.next = next;
             this.prev = prev;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "item=" + item +  '}';
         }
     }
 
@@ -262,7 +302,7 @@ public class LinkedList<E> implements Iterable<E> {
     }
 
     public static void main(String[] args) {
-        LinkedList<String> list = new LinkedList<String>();
+        LinkedList<String> list = new LinkedList<>();
 
         list.push("a");
         list.push("b");
@@ -272,6 +312,9 @@ public class LinkedList<E> implements Iterable<E> {
 
         System.out.println("size of list = " + list.size());
         System.out.println(list);
+
+        System.out.println(list.getNode(0)); //a
+        System.out.println(list.getNode(2)); //d
     }
 }
 
