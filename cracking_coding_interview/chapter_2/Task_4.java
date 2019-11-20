@@ -18,9 +18,27 @@ public class Task_4 {
         System.out.println(splitOnPartitions(list, 5)); // 3, 1, 2, 10, 5, 5, 8
     }
 
-    // TODO
-    private static <E> LinkedList<E> splitOnPartitions(LinkedList<E> list, int partition) {
+    // Complexity: O(n), Memory: O(1)
+    private static LinkedList<Integer> splitOnPartitions(LinkedList<Integer> list, int partition) {
+        LinkedList.Node<Integer> first = list.getNode(0);
+        LinkedList.Node<Integer> last = list.getNode(list.length() - 1);
+        int buf;
 
+        while (first != last) {
+            if (first.item >= partition) {
+                if (last.item < partition) {
+                    buf = first.item;
+                    first.item = last.item;
+                    last.item = buf;
+
+                    first = first.next;
+                } else {
+                    last = last.prev;
+                }
+            } else {
+                first = first.next;
+            }
+        }
 
         return list;
     }

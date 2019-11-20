@@ -2,6 +2,7 @@ package chapter_2;
 
 import structures.LinkedList;
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * Loop Detection:
@@ -20,8 +21,19 @@ public class Task_8 {
         System.out.println(findLoop(list)); //C
     }
 
-    private static String findLoop(LinkedList<String> input) {
+    // Complexity:
+    private static <E> LinkedList.Node<E> findLoop(LinkedList<E> input) {
+        HashSet<LinkedList.Node<E>> set = new HashSet<>();
 
-        return "";
+        LinkedList.Node<E> node = input.getNode(0);
+
+        while (node != null) {
+            if (set.contains(node)) return node;
+
+            set.add(node);
+            node = node.next;
+        }
+
+        return null;
     }
 }

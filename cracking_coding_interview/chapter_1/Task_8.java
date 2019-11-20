@@ -21,14 +21,15 @@ public class Task_8 {
     // Complexity: n^2 + n^2 -> O(n^2), Memory: n + n + const -> O(n)
     private static int[][] nullify(int[][] matrix) {
         int n = matrix.length;
-        boolean rows[] = new boolean[n];
-        boolean columns[] = new boolean[n];
+        // We can eliminate additional arrays by using first row and column for storing mark about nullification
+        boolean[] rows = new boolean[n];
+        boolean[] columns = new boolean[n];
 
         for (int row = 0; row < n; row++) {
             for (int column = 0; column < n; column++) {
                 if (matrix[row][column] == 0) {
                     rows[row] = true;
-                    columns[row] = true;
+                    columns[column] = true;
                 }
             }
         }

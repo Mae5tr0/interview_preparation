@@ -6,3 +6,10 @@ Solutions for tasks from:
 * Leetcode
 
 Implemented algorithms, data structures
+
+
+TODO:
+Study solution: 
+ * 1.4 (bitmap) 
+ * 2.3 (iterative)
+ * 2.8 Slow/Fast runner

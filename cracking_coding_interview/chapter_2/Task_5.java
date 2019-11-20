@@ -18,7 +18,6 @@ public class Task_5 {
         System.out.println(sum(a, b)); // 2, 1, 9
     }
 
-
     // Complexity: a + b -> O(a), memory: O(1)
     private static LinkedList<Integer> sum(LinkedList<Integer> first, LinkedList<Integer> second) {
         int maxLength = Math.max(first.length(), second.length());

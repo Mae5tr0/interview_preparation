@@ -26,19 +26,27 @@ public class Task_7 {
         printMatrix(rotate(matrix_2));
     }
 
-    // TODO
+    // Complexity: O(n^2)
     private static int[][] rotate(int[][] matrix) {
-//        int layerCount = matrix.length / 2;
-//        for (int i = 0; i < layerCount; i++) {
-//            int first = i;
-//            int last = matrix.length - i;
-//
-//            for (int j = first; j < last; j++) {
-//                int buf;
-//
-//
-//            }
-//        }
+        int n = matrix.length;
+        for (int layer = 0; layer < n / 2; layer++) {
+            int first = layer;
+            int last = n - 1 - layer;
+
+            for (int i = first; i < last; i++) {
+                int offset = i - first;
+                int top = matrix[layer][i];
+
+                // left -> top
+                matrix[first][i] = matrix[last - offset][first];
+                // bottom -> left
+                matrix[last - offset][first] = matrix[last][last - offset];
+                // fight -> bottom
+                matrix[last][last - offset] = matrix[i][last];
+                // top -> right
+                matrix[i][last] = top;
+            }
+        }
 
         return matrix;
     }

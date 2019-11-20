@@ -20,8 +20,8 @@ public class Task_6 {
 
     // Complexity: n/2 -> O(n), Memory: O(1)
     private static boolean isPalindrome(LinkedList<String> input) {
-        LinkedList.Node start = input.getNode(0);
-        LinkedList.Node end = input.getNode(input.length() - 1);
+        LinkedList.Node<String> start = input.getNode(0);
+        LinkedList.Node<String> end = input.getNode(input.length() - 1);
 
         for (int i = 0; i < input.length()/2 ; i++) {
             if (start.item != end.item) return false;

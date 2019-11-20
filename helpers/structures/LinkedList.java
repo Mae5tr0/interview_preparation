@@ -291,7 +291,7 @@ public class LinkedList<E> implements Iterable<E> {
     public String toString() {
         StringBuilder result = new StringBuilder();
         result.append("[");
-        Iterator iterator = this.iterator();
+        Iterator<E> iterator = this.iterator();
         while (iterator.hasNext()) {
             result.append(iterator.next().toString());
             if (iterator.hasNext()) result.append(", ");

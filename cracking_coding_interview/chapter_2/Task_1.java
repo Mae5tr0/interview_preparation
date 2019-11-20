@@ -16,11 +16,12 @@ public class Task_1 {
         System.out.println(removeDuplicates(list)); // A, B, C, D, E
     }
 
-    // Complexity: n + n * log(n) -> O(n*log(n)), Memory: 2n -> O(n)
+    // Complexity: n + const -> O(n), Memory: 2n -> O(n)
     private static <E> LinkedList<E> removeDuplicates(LinkedList<E> list) {
         HashSet<E> buffer = new HashSet<>();
 
         LinkedList<E> result = new LinkedList<>();
+        // we can optimize solution by removing duplicated node directly from list
         for (E el : list) {
             if (!buffer.contains(el)) {
                 buffer.add(el);
