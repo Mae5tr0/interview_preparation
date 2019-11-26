@@ -1,11 +1,14 @@
 package structures;
 
+import edu.princeton.cs.algs4.Queue;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * Doubly-linked list implementation of the {@code List} and {@code Deque}.
+ * Doubly-linked list implementation of the {@code List}, {@code Stack} and {@code Queue}.
+ * OOP design is not well, because we are not building reusable solution, merely common structure for algorithms
  *
  * <p>All of the operations perform as could be expected for a doubly-linked
  * list.  Operations that index into the list will traverse the list from
@@ -84,6 +87,15 @@ public class LinkedList<E> implements Iterable<E> {
     }
 
     /**
+     * Appends the specified element to the beginning of this list.
+     *
+     * @param e the element to add
+     */
+    public void addFirst(E e) {
+        linkFirst(e);
+    }
+
+    /**
      * Appends the specified element to the end of this list.
      *
      * @param e the element to add
@@ -93,12 +105,22 @@ public class LinkedList<E> implements Iterable<E> {
     }
 
     /**
-     * Inserts the specified element at the beginning of this list.
+     * Adds the item to this queue.
      *
-     * @param e the element to add
+     * @param  item the item to add
      */
-    public void addFirst(E e) {
-        linkFirst(e);
+    public void enqueue(E item) {
+        addFirst(item);
+    }
+
+    /**
+     * Removes and returns the item on this queue that was least recently added.
+     *
+     * @return the item on this queue that was least recently added
+     * @throws NoSuchElementException if this queue is empty
+     */
+    public E dequeue() {
+        return removeLast();
     }
 
     /**
@@ -123,7 +145,12 @@ public class LinkedList<E> implements Iterable<E> {
      * @throws NoSuchElementException if this list is empty
      */
     public E removeLast() {
-        return pop();
+        if (isEmpty()) throw new NoSuchElementException();
+
+        E result = last.item;
+        unlinkLast();
+
+        return result;
     }
 
     /**
@@ -159,7 +186,7 @@ public class LinkedList<E> implements Iterable<E> {
      * @param e the element to push
      */
     public void push(E e) {
-        linkLast(e);
+        linkFirst(e);
     }
 
     /**
@@ -171,12 +198,7 @@ public class LinkedList<E> implements Iterable<E> {
      * @throws NoSuchElementException if this list is empty
      */
     public E pop() {
-        if (isEmpty()) throw new NoSuchElementException();
-
-        E result = last.item;
-        unlinkLast();
-
-        return result;
+        return removeFirst();
     }
 
     /**
