@@ -11,7 +11,7 @@ import structures.LinkedList;
  */
 public class Task_4 {
     public static void main(String[] args) {
-        MyQueue queue = new MyQueue();
+        MyQueue2 queue = new MyQueue2();
 
         queue.add(1);
         queue.add(2);
@@ -42,6 +42,36 @@ public class Task_4 {
             shiftEntries(right, left);
 
             return result;
+        }
+
+        private void shiftEntries(LinkedList<Integer> from, LinkedList<Integer> to) {
+            while (!from.isEmpty()) {
+                to.push(from.pop());
+            }
+        }
+
+        @Override
+        public String toString() {
+            return "MyQueue{" +
+                    ", left=" + left +
+                    ", right=" + right +
+                    '}';
+        }
+    }
+
+    // Complexity: Remove -> O(n); Add -> O(1)
+    private static class MyQueue2 {
+        private LinkedList<Integer> left = new LinkedList<>();
+        private LinkedList<Integer> right = new LinkedList<>();
+
+        public void add(int value) {
+            left.push(value);
+        }
+
+        public int remove() {
+            if (right.isEmpty()) shiftEntries(left, right);
+
+            return right.pop();
         }
 
         private void shiftEntries(LinkedList<Integer> from, LinkedList<Integer> to) {

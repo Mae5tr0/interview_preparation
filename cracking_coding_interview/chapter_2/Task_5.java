@@ -20,22 +20,22 @@ public class Task_5 {
 
     // Complexity: a + b -> O(a), memory: O(1)
     private static LinkedList<Integer> sum(LinkedList<Integer> first, LinkedList<Integer> second) {
-        int maxLength = Math.max(first.length(), second.length());
-        LinkedList.Node<Integer> fistNode = first.getNode(0);
-        LinkedList.Node<Integer> secondNode = second.getNode(0);
+        int maxLength = Math.max(first.size(), second.size());
+        LinkedList.ListNode<Integer> fistListNode = first.getNode(0);
+        LinkedList.ListNode<Integer> secondListNode = second.getNode(0);
         LinkedList<Integer> result = new LinkedList<>();
         boolean rest = false;
 
         for (int i = maxLength; i > 0; i--) {
             int sum = rest ? 1 : 0;
             rest = false;
-            if (fistNode != null) {
-                sum += fistNode.item;
-                fistNode = fistNode.next;
+            if (fistListNode != null) {
+                sum += fistListNode.item;
+                fistListNode = fistListNode.next;
             }
-            if (secondNode != null) {
-                sum += secondNode.item;
-                secondNode = secondNode.next;
+            if (secondListNode != null) {
+                sum += secondListNode.item;
+                secondListNode = secondListNode.next;
             }
 
             if (sum >= 10) {

@@ -37,7 +37,7 @@ public class Task_6 {
     }
 
     private static class AnimalShelter {
-        private Integer counter = 0;  // in long time it's possible to overflow counter
+        private Integer counter = 0;  // in long time it's possible to overflow counter, we can use Date here
         LinkedList<Pair<Integer, Cat>> cats = new LinkedList<>();
         LinkedList<Pair<Integer, Dog>> dogs = new LinkedList<>();
 

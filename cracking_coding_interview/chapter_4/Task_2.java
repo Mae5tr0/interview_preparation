@@ -1,5 +1,7 @@
 package chapter_4;
 
+import structures.BinaryTree;
+
 /**
  * Minimal Tree
  *
@@ -19,6 +21,9 @@ public class Task_2 {
         insertToTree(0, array.length - 1, tree, array);
 
         System.out.println(tree);
+
+        BinaryTree.TreeNode rootTreeNodeBST = createMinimalBST(array, 0, array.length - 1);
+        System.out.println(rootTreeNodeBST);
     }
 
     // Complexity: O(n)
@@ -34,74 +39,15 @@ public class Task_2 {
         if (mid + 1 <= hi) insertToTree(mid + 1, hi, tree, array);
     }
 
-    public static class BinaryTree {
-        private int height = 0;
-        private Node root;
+    // Building tree directly
+    private static BinaryTree.TreeNode createMinimalBST(int[] array, int lo, int hi) {
+        if (hi < lo) return null;
 
-        private static class Node {
-            private Node left;
-            private Node right;
-            private int key;
+        int mid = (hi + lo) / 2;
+        BinaryTree.TreeNode treeNode = new BinaryTree.TreeNode(array[mid]);
+        treeNode.left = createMinimalBST(array, lo, mid - 1);
+        treeNode.right = createMinimalBST(array, mid + 1, hi);
 
-            public Node(int key) {
-                this.key = key;
-            }
-
-            public String toString() {
-                StringBuilder buffer = new StringBuilder(50);
-                print(buffer, "", "");
-                return buffer.toString();
-            }
-
-            private void print(StringBuilder buffer, String prefix, String childrenPrefix) {
-                buffer.append(prefix);
-                buffer.append(key);
-                buffer.append('\n');
-                if (left != null && right != null) {
-                    left.print(buffer, childrenPrefix + "├── ", childrenPrefix + "│   ");
-                    right.print(buffer, childrenPrefix + "└── ", childrenPrefix + "    ");
-                } else {
-                    if (left != null)
-                        left.print(buffer, childrenPrefix + "└── ", childrenPrefix + "    ");
-                    if (right != null)
-                        right.print(buffer, childrenPrefix + "└── ", childrenPrefix + "    ");
-                }
-            }
-        }
-
-        public void put(int key) {
-            root = put(root, key, 1);
-        }
-
-        private Node put(Node node, int key, int distance) {
-            if (node == null) {
-                if (distance > height) height = distance;
-                return new Node(key);
-            }
-
-            if (node.key < key) {
-                node.left = put(node.left, key, distance + 1);
-            } else {
-                node.right = put(node.right, key, distance + 1);
-            }
-
-            return node;
-        }
-
-        public int getHeight() {
-            return height;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder result = new StringBuilder();
-            if (root != null) {
-                result.append(root.toString()).append('\n');
-            } else {
-                result.append("_\n");
-            }
-            result.append("Height: ").append(height);
-            return result.toString();
-        }
+        return treeNode;
     }
 }

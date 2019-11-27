@@ -14,24 +14,24 @@ import java.util.HashSet;
 public class Task_8 {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("A", "B", "C", "D", "E"));
-        LinkedList.Node<String> cNode = list.getNode(2);
-        LinkedList.Node<String> eNode = list.getNode(4);
-        eNode.next = cNode;
+        LinkedList.ListNode<String> cListNode = list.getNode(2);
+        LinkedList.ListNode<String> eListNode = list.getNode(4);
+        eListNode.next = cListNode;
 
         System.out.println(findLoop(list)); //C
     }
 
     // Complexity:
-    private static <E> LinkedList.Node<E> findLoop(LinkedList<E> input) {
-        HashSet<LinkedList.Node<E>> set = new HashSet<>();
+    private static <E> LinkedList.ListNode<E> findLoop(LinkedList<E> input) {
+        HashSet<LinkedList.ListNode<E>> set = new HashSet<>();
 
-        LinkedList.Node<E> node = input.getNode(0);
+        LinkedList.ListNode<E> listNode = input.getNode(0);
 
-        while (node != null) {
-            if (set.contains(node)) return node;
+        while (listNode != null) {
+            if (set.contains(listNode)) return listNode;
 
-            set.add(node);
-            node = node.next;
+            set.add(listNode);
+            listNode = listNode.next;
         }
 
         return null;

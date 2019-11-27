@@ -48,7 +48,7 @@ public class Task_3 {
         public void push(int value) {
             LinkedList<Integer> stack = stacks.getLast();
 
-            if (stack.length() + 1 > threshold) {
+            if (stack.size() + 1 > threshold) {
                 stack = new LinkedList<>();
                 stack.push(value);
                 stacks.push(stack);
@@ -61,7 +61,7 @@ public class Task_3 {
             LinkedList<Integer> stack = stacks.getLast();
             int result = stack.pop();
 
-            if (stack.length() == 0) stacks.pop();
+            if (stack.size() == 0) stacks.pop();
 
             return result;
         }

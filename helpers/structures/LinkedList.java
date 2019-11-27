@@ -1,7 +1,5 @@
 package structures;
 
-import edu.princeton.cs.algs4.Queue;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -26,8 +24,8 @@ import java.util.NoSuchElementException;
  * @param <E> the type of elements held in this collection
  */
 public class LinkedList<E> implements Iterable<E> {
-    private Node<E> first;
-    private Node<E> last;
+    private ListNode<E> first;
+    private ListNode<E> last;
     private int size = 0;
 
     public LinkedList() {
@@ -66,24 +64,15 @@ public class LinkedList<E> implements Iterable<E> {
      * @throws IllegalArgumentException unless {@code 0 < K < size }
      */
 
-    public Node<E> getNode(int k) {
+    public ListNode<E> getNode(int k) {
         if (k < 0 || k >= size) throw new IllegalArgumentException("argument must be between 0 and " + (size - 1));
-        Node<E> result = first;
+        ListNode<E> result = first;
 
         while (k > 0) {
             result = result.next;
             k--;
         }
         return result;
-    }
-
-    /**
-     * Returns the number of elements in this list.
-     *
-     * @return the number of elements in this list
-     */
-    public int length() {
-        return size;
     }
 
     /**
@@ -102,25 +91,6 @@ public class LinkedList<E> implements Iterable<E> {
      */
     public void addLast(E e) {
         linkLast(e);
-    }
-
-    /**
-     * Adds the item to this queue.
-     *
-     * @param  item the item to add
-     */
-    public void enqueue(E item) {
-        addFirst(item);
-    }
-
-    /**
-     * Removes and returns the item on this queue that was least recently added.
-     *
-     * @return the item on this queue that was least recently added
-     * @throws NoSuchElementException if this queue is empty
-     */
-    public E dequeue() {
-        return removeLast();
     }
 
     /**
@@ -177,6 +147,27 @@ public class LinkedList<E> implements Iterable<E> {
         return first.item;
     }
 
+    // Queue
+    /**
+     * Adds the item to this queue.
+     *
+     * @param  item the item to add
+     */
+    public void enqueue(E item) {
+        addFirst(item);
+    }
+
+    /**
+     * Removes and returns the item on this queue that was least recently added.
+     *
+     * @return the item on this queue that was least recently added
+     * @throws NoSuchElementException if this queue is empty
+     */
+    public E dequeue() {
+        return removeLast();
+    }
+
+    // Stack
     /**
      * Pushes an element onto the stack represented by this list.  In other
      * words, inserts the element at the front of this list.
@@ -202,6 +193,15 @@ public class LinkedList<E> implements Iterable<E> {
     }
 
     /**
+     * Returns (but does not remove) the item most recently added to this stack.
+     * @return the item most recently added to this stack
+     * @throws java.util.NoSuchElementException if this stack is empty
+     */
+    public E peek() {
+        return getFirst();
+    }
+
+    /**
      * Removes all of the elements from this list.
      * The list will be empty after this call returns.
      */
@@ -210,12 +210,12 @@ public class LinkedList<E> implements Iterable<E> {
         size = 0;
     }
 
-    public static class Node<E> {
+    public static class ListNode<E> {
         public E item;
-        public Node<E> next;
-        public Node<E> prev;
+        public ListNode<E> next;
+        public ListNode<E> prev;
 
-        Node(E item, Node<E> next, Node<E> prev) {
+        ListNode(E item, ListNode<E> next, ListNode<E> prev) {
             this.item = item;
             this.next = next;
             this.prev = prev;
@@ -237,7 +237,7 @@ public class LinkedList<E> implements Iterable<E> {
 
     // an iterator over a linked list
     private class ListIterator implements Iterator<E> {
-        private Node<E> current;
+        private ListNode<E> current;
 
         // creates a new iterator
         public ListIterator() {
@@ -285,12 +285,12 @@ public class LinkedList<E> implements Iterable<E> {
 
     private void linkFirst(E item) {
         if (isEmpty()) {
-            Node<E> node = new Node<E>(item, null, null);
-            first = last = node;
+            ListNode<E> listNode = new ListNode<E>(item, null, null);
+            first = last = listNode;
         } else {
-            Node<E> node = new Node<E>(item, first, null);
-            first.prev = node;
-            first = node;
+            ListNode<E> listNode = new ListNode<E>(item, first, null);
+            first.prev = listNode;
+            first = listNode;
         }
 
         size++;
@@ -298,12 +298,12 @@ public class LinkedList<E> implements Iterable<E> {
 
     private void linkLast(E item) {
         if (isEmpty()) {
-            Node<E> node = new Node<E>(item, null, null);
-            first = last = node;
+            ListNode<E> listNode = new ListNode<E>(item, null, null);
+            first = last = listNode;
         } else {
-            Node<E> node = new Node<E>(item, null, last);
-            last.next = node;
-            last = node;
+            ListNode<E> listNode = new ListNode<E>(item, null, last);
+            last.next = listNode;
+            last = listNode;
         }
 
         size++;

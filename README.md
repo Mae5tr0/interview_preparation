@@ -13,5 +13,3 @@ Study solution:
  * 1.4 (bitmap) 
  * 2.3 (iterative)
  * 2.8 Slow/Fast runner
- * 3.*
- *

@@ -24,24 +24,14 @@ public class Task_5 {
     // Complexity: O(n^2)
     private static LinkedList<Integer> sort(LinkedList<Integer> origin) {
         LinkedList<Integer> result = new LinkedList<>();
-        boolean processed = false;
 
         while (!origin.isEmpty()) {
             int current = origin.pop();
 
-            while (!result.isEmpty() && !processed) {
-                int item = result.pop();
-
-                if (current < item) {
-                    result.push(item);
-                    result.push(current);
-                    processed = true;
-                } else {
-                    origin.push(item);
-                }
+            while (!result.isEmpty() && result.peek() > current) {
+                origin.push(result.pop());
             }
-            if (!processed) result.push(current);
-            processed = false;
+            result.push(current);
         }
 
         return result;

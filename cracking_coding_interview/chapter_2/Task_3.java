@@ -18,11 +18,11 @@ public class Task_3 {
 
     // Complexity: O(position)
     private static <E> LinkedList<E> deleteNode(LinkedList<E> list, int position) {
-        LinkedList.Node<E> removedNode = list.getNode(position);
-        LinkedList.Node<E> nextNode = list.getNode(position + 1);
+        LinkedList.ListNode<E> removedListNode = list.getNode(position);
+        LinkedList.ListNode<E> nextListNode = list.getNode(position + 1);
 
-        removedNode.item = nextNode.item;
-        removedNode.next = nextNode.next;
+        removedListNode.item = nextListNode.item;
+        removedListNode.next = nextListNode.next;
 
         return list;
     }

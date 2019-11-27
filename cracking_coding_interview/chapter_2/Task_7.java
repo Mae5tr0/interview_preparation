@@ -16,33 +16,33 @@ import java.util.HashSet;
 public class Task_7 {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("A", "B", "C", "D"));
-        LinkedList.Node<String> cNode = list.getNode(2);
+        LinkedList.ListNode<String> cListNode = list.getNode(2);
 
         LinkedList<String> list_2 = new LinkedList<>(Arrays.asList("X", "C", "Y", "Z"));
-        LinkedList.Node<String> xNode = list_2.getNode(0);
-        LinkedList.Node<String> yNode = list_2.getNode(2);
+        LinkedList.ListNode<String> xListNode = list_2.getNode(0);
+        LinkedList.ListNode<String> yListNode = list_2.getNode(2);
 
-        xNode.next = cNode;
-        yNode.prev = cNode;
+        xListNode.next = cListNode;
+        yListNode.prev = cListNode;
 
         System.out.println(intersection(list, list_2)); // C
     }
 
     // Complexity: a + b -> O(a), Memory: O(a)
-    private static <E> LinkedList.Node<E> intersection(LinkedList<E> aList, LinkedList<E> bList) {
-        HashSet<LinkedList.Node<E>> set = new HashSet<>();
+    private static <E> LinkedList.ListNode<E> intersection(LinkedList<E> aList, LinkedList<E> bList) {
+        HashSet<LinkedList.ListNode<E>> set = new HashSet<>();
 
-        LinkedList.Node<E> aNode = aList.getNode(0);
+        LinkedList.ListNode<E> aListNode = aList.getNode(0);
 
-        while (aNode != null) {
-            set.add(aNode);
-            aNode = aNode.next;
+        while (aListNode != null) {
+            set.add(aListNode);
+            aListNode = aListNode.next;
         }
 
-        LinkedList.Node<E> bNode = bList.getNode(0);
-        while (bNode != null) {
-            if (set.contains(bNode)) return bNode;
-            bNode = bNode.next;
+        LinkedList.ListNode<E> bListNode = bList.getNode(0);
+        while (bListNode != null) {
+            if (set.contains(bListNode)) return bListNode;
+            bListNode = bListNode.next;
         }
 
         return null;

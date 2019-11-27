@@ -20,8 +20,8 @@ public class Task_4 {
 
     // Complexity: O(n), Memory: O(1)
     private static LinkedList<Integer> splitOnPartitions(LinkedList<Integer> list, int partition) {
-        LinkedList.Node<Integer> first = list.getNode(0);
-        LinkedList.Node<Integer> last = list.getNode(list.length() - 1);
+        LinkedList.ListNode<Integer> first = list.getNode(0);
+        LinkedList.ListNode<Integer> last = list.getNode(list.size() - 1);
         int buf;
 
         while (first != last) {
