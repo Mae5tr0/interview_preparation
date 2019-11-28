@@ -7,10 +7,16 @@ public class BinaryTree {
     public static class TreeNode {
         public TreeNode left;
         public TreeNode right;
+        public TreeNode parent; // required for some tasks
         public int value;
 
         public TreeNode(int value) {
             this.value = value;
+        }
+
+        public TreeNode(int value, TreeNode parent) {
+            this.value = value;
+            this.parent = parent;
         }
 
         public String toString() {
@@ -35,24 +41,38 @@ public class BinaryTree {
         }
     }
 
-    public void put(int key) {
-        root = put(root, key);
+    public TreeNode getNode(int key) {
+        return getNode(key, root);
     }
 
-    private TreeNode put(TreeNode treeNode, int key) {
+    private TreeNode getNode(int key, TreeNode node) {
+        if (node == null) return null;
+
+        if (key < node.value) return getNode(key, node.left);
+        if (key > node.value) return getNode(key, node.right);
+
+        return node;
+    }
+
+    public void put(int key) {
+        root = put(root, key, null);
+    }
+
+    private TreeNode put(TreeNode treeNode, int key, TreeNode parent) {
         if (treeNode == null) {
-            return new TreeNode(key);
+            return new TreeNode(key, parent);
         }
 
         if (treeNode.value == key) return treeNode;
         if (key < treeNode.value) {
-            treeNode.left = put(treeNode.left, key);
+            treeNode.left = put(treeNode.left, key, treeNode);
         } else {
-            treeNode.right = put(treeNode.right, key);
+            treeNode.right = put(treeNode.right, key, treeNode);
         }
 
         return treeNode;
     }
+
 
     @Override
     public String toString() {
