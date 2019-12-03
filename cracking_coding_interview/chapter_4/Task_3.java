@@ -2,7 +2,6 @@ package chapter_4;
 
 import structures.BinaryTree;
 import structures.LinkedList;
-
 import java.util.ArrayList;
 
 /**

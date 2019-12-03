@@ -73,7 +73,6 @@ public class BinaryTree {
         return treeNode;
     }
 
-
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
