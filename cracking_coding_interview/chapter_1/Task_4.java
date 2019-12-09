@@ -11,7 +11,8 @@ package chapter_1;
  */
 public class Task_4 {
     public static void main(String[] args) {
-        System.out.println(isPalindromPermutation("Tact Coa"));
+//        System.out.println(isPalindromPermutation("Tact Coa"));
+        System.out.println(isPalindromPermutation2("Tact Coa")); // true
     }
 
     // Complexity: n + n -> O(n)
@@ -47,4 +48,41 @@ public class Task_4 {
     private static boolean isEven(int number) {
         return (number % 2) == 0;
     }
+
+    private static boolean isPalindromPermutation2(String input) {
+        int bitVector = createBitVector(input);
+        return bitVector == 0 || checkOnlyOneBitSet(bitVector);
+    }
+
+    private static int createBitVector(String input) {
+        int result = 0;
+        for (char c : input.toLowerCase().toCharArray()) {
+            int position = getCharNumber(c);
+            result = toggle(result, position);
+        }
+
+        return result;
+    }
+
+    private static int toggle(int bitVector, int index) {
+        if (index < 0 || index > 26) return bitVector;
+        int mask = 1 << index;
+
+        if ((bitVector & mask) == 0) {
+            bitVector |= mask;
+        } else {
+            bitVector &= ~mask;
+        }
+
+        return bitVector;
+    }
+
+    private static boolean checkOnlyOneBitSet(int bitVector) {
+        return (bitVector & (bitVector - 1)) == 0;
+    }
+
+    private static int getCharNumber(char c) {
+        return c - 'a';
+    }
+
 }
