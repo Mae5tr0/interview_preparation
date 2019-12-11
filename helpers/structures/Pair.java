@@ -17,6 +17,14 @@ public class Pair<E, V> {
         return b;
     }
 
+    public void setSecond(V value) {
+        this.b = value;
+    }
+
+    public void setFirst(E value) {
+        this.a = value;
+    }
+
     @Override
     public String toString() {
         return "(" + a + ',' + b + ')';
