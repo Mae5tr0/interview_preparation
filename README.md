@@ -7,10 +7,10 @@ Solutions for tasks from:
 
 Implemented algorithms, data structures
 
-
 TODO:
 Study solution: 
  * 2.3 (iterative)
  * 2.8 Slow/Fast runner
- * 6.7, 6.10 make simulation
+ * 6.7, 6.8, 6.9, 6.10 make simulation
+ * 7.6 - 7.10
  
