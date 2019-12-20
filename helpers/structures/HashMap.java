@@ -176,7 +176,7 @@ public class HashMap<Key, Value> {
     }
 
     private int hash(Key key) {
-        return key.hashCode() % storage.length;
+        return (key.hashCode() & 0x7fffffff) % storage.length;
     }
 
     private void resize(int newSize) {
