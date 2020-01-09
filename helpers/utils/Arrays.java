@@ -20,6 +20,15 @@ public class Arrays {
         }
     }
 
+    public static int[] toIntArray(Integer[] arr)  {
+        int[] ret = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            ret[i] = arr[i];
+        }
+
+        return ret;
+    }
+
     public static void shuffle(Object[] a) {
         int n = a.length;
 
@@ -33,6 +42,10 @@ public class Arrays {
     }
 
     public static void print(Object[] arr) {
+        System.out.println(java.util.Arrays.toString(arr));
+    }
+
+    public static void print(int[] arr) {
         System.out.println(java.util.Arrays.toString(arr));
     }
 }
