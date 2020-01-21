@@ -3,8 +3,6 @@ package challenges;
 import structures.BinaryTree;
 import structures.LinkedList;
 
-import java.util.ArrayList;
-
 public class TreeLevelOrderTraversal {
     public static void main(String[] args) {
         //int[] input = {5, 4, 7, 9, 0, 3, 6, 8, 11, 15, 18};  // false

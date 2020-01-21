@@ -2,7 +2,7 @@ package amazon;
 
 import java.util.*;
 
-public class Solution_2 {
+public class TopCompetitors {
 
     public static void main(String[] args) {
         List<String> reviews = new LinkedList<String>(Arrays.asList(
@@ -15,8 +15,8 @@ public class Solution_2 {
             "Thanks Newshop for the quick delivery"
         ));
 
-        Solution_2 solution_2 = new Solution_2();
-        List<String> result = solution_2.topNCompetitors(
+        TopCompetitors topCompetitors = new TopCompetitors();
+        List<String> result = topCompetitors.topNCompetitors(
                 6,
                 2,
                 new LinkedList<>(Arrays.asList("newshop", "shopnow", "afshion", "fashionbeats", "mymarket", "tcellular")),

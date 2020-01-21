@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Solution_1 {
+public class UpdatingServerMinimumDays {
 
     public static void main(String[] args) {
-        Solution_1 solution1 = new Solution_1();
+        UpdatingServerMinimumDays solution1 = new UpdatingServerMinimumDays();
 
         List<List<Integer>> grid = new LinkedList<>();
         grid.add(new LinkedList<>(Arrays.asList(0, 1, 1, 0, 0)));
