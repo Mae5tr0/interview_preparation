@@ -12,7 +12,26 @@ public class Task_1 {
         int a = 17;
         int b = 3;
 
-        // xor
+        System.out.println(a + " -> " + Integer.toBinaryString(a));
+        System.out.println(b + " -> " + Integer.toBinaryString(b));
+
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+        System.out.println(a + " -> " + Integer.toBinaryString(a));
+        System.out.println(b + " -> " + Integer.toBinaryString(b));
+
+        // diff
+        a = 5;
+        b = 9;
+
+        System.out.println(a);
+        System.out.println(b);
+
+        a = b - a; // diff
+        b = b - a; // a
+        a = a + b; // b
 
         System.out.println(a);
         System.out.println(b);
