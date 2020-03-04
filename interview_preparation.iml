@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/leetcode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/codesignal" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pramp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/yandex" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
