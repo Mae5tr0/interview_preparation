@@ -1,6 +1,6 @@
 package problems;
 
-import utils.Arrays;
+//import utils.Arrays;
 
 /**
  * (Given a matrix A, return the transpose of A.)[https://leetcode.com/problems/transpose-matrix/]
@@ -18,7 +18,7 @@ public class Problem_617 {
         };
 
         // [[1,4,7],[2,5,8],[3,6,9]]
-        Arrays.printMatrix(transpose(input));
+//        Arrays.printMatrix(transpose(input));
     }
 
     static public int[][] transpose(int[][] A) {

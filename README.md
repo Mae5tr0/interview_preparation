@@ -8,15 +8,7 @@ Solutions for tasks from:
 
 Implemented algorithms, data structures
 
-TODO:
-Study solution:
-
-- 2.3 (iterative)
-- 2.8 Slow/Fast runner
-- 6.7, 6.8, 6.9, 6.10 make simulation
-- 7.6 - 7.10
-
-# Interview Preparation Kit
+# Hacker Rank Interview Preparation Kit
 
 | Num | Folder | Name                                                                                     | Level  | Solution                                                        |
 | --- | ------ | ---------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------- |
@@ -28,3 +20,7 @@ Study solution:
 | 6   | ...    |                                                                                          |        |                                                                 |
 
 11 out of 65 are solved.
+
+# LeetCode 
+
+2 out of 203 are solved
