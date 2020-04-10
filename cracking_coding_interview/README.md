@@ -1,9 +1,11 @@
 # Cracking the Coding Interview
 
-Solutions for tasks from books [Cracking the Coding Interview](http://www.crackingthecodinginterview.com)
+Solutions for problems from books [Cracking the Coding Interview](http://www.crackingthecodinginterview.com)
 
-![Cracking the Coding Interview](cover.jpeg)
+<p align="left">
+    <img height=80 src="https://github.com/Mae5tr0/interview_preparation/raw/master/cracking_coding_interview/cover.jpeg">
+</p>
 
 
-| ﻿#   |                                                                     Question                                                                    |          Done           |  Difficulty |
-|:----:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|:----------:|
+| ﻿   |       Paragraph                                                                    |          Done           |  Difficulty |
+|:----:|:----------------------------------------------------------------------------:|:-----------------------:|:----------:|

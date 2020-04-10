@@ -1,3 +1,7 @@
+
+Processing number by digit
+
+```java
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,4 +26,6 @@ class Digits {
         return result;
     }
 }
+```
+
 

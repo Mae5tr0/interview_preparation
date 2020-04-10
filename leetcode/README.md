@@ -4,7 +4,6 @@
   </a>
 </p>
 
-https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png
 |  ﻿#   |                                                                     Question                                                                    |          Done           |  Difficulty |
 |:----:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|:----------:|
 |   1  | [Two Sum](https://leetcode.com/problems/two-sum)                                                                                                 |                         |    Easy    |
@@ -34,10 +33,10 @@ https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png
 |  46  | [Permutations](https://leetcode.com/problems/permutations)                                                                                       |                         |   Medium   |
 |  47  | [Permutations II](https://leetcode.com/problems/permutations-ii)                                                                                 |                         |   Medium   |
 |  48  | [Rotate Image](https://leetcode.com/problems/rotate-image)                                                                                       |                         |   Medium   |
-|  49  | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                                                                   |                         |   Medium   |
+|  49  | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                                                                   |   :white_check_mark:    |   Medium   |
 |  51  | [N-Queens](https://leetcode.com/problems/n-queens)                                                                                               |                         |    Hard    |
 |  52  | [N-Queens II](https://leetcode.com/problems/n-queens-ii)                                                                                         |                         |    Hard    |
-|  53  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)                                                                               |                         |    Easy    |
+|  53  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)                                                                               |   :white_check_mark:    |    Easy    |
 |  55  | [Jump Game](https://leetcode.com/problems/jump-game)                                                                                             |                         |   Medium   |
 |  58  | [Length of Last Word](https://leetcode.com/problems/length-of-last-word)                                                                         |                         |    Easy    |
 |  62  | [Unique Paths](https://leetcode.com/problems/unique-paths)                                                                                       |                         |   Medium   |
@@ -67,11 +66,11 @@ https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png
 |  111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)                                                       |                         |    Easy    |
 |  118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)                                                                              |                         |    Easy    |
 |  119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii)                                                                        |                         |    Easy    |
-|  121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                                                 |                         |    Easy    |
-|  122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)                                           |                         |    Easy    |
+|  121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                                                 |   :white_check_mark:    |    Easy    |
+|  122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)                                           |   :white_check_mark:    |    Easy    |
 |  125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)                                                                               |                         |    Easy    |
 |  127 | [Word Ladder](https://leetcode.com/problems/word-ladder)                                                                                         |                         |   Medium   |
-|  136 | [Single Number](https://leetcode.com/problems/single-number)                                                                                     |    :white_check_mark:   |    Easy    |
+|  136 | [Single Number](https://leetcode.com/problems/single-number)                                                                                     |   :white_check_mark:    |    Easy    |
 |  139 | [Word Break](https://leetcode.com/problems/word-break)                                                                                           |                         |   Medium   |
 |  141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)                                                                             |                         |    Easy    |
 |  142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii)                                                                       |                         |   Medium   |
@@ -132,7 +131,7 @@ https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png
 |  268 | [Missing Number](https://leetcode.com/problems/missing-number)                                                                                   |                         |    Easy    |
 |  273 | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words)                                                               |                         |    Hard    |
 |  278 | [First Bad Version](https://leetcode.com/problems/first-bad-version)                                                                             |                         |    Easy    |
-|  283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes)                                                                                         |                         |    Easy    |
+|  283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes)                                                                                         |   :white_check_mark:    |    Easy    |
 |  290 | [Word Pattern](https://leetcode.com/problems/word-pattern)                                                                                       |                         |    Easy    |
 |  292 | [Nim Game](https://leetcode.com/problems/nim-game)                                                                                               |                         |    Easy    |
 |  295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)                                                       |                         |    Hard    |
