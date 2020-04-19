@@ -59,7 +59,7 @@
 |  100 | [Same Tree](https://leetcode.com/problems/same-tree)                                                                                             |                         |    Easy    |
 |  101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree)                                                                                   |                         |    Easy    |
 |  102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)                                             |                         |   Medium   |
-|  104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)                                                       |                         |    Easy    |
+|  104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)                                                       |   :white_check_mark:    |    Easy    |
 |  107 | [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii)                                       |                         |    Easy    |
 |  108 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)                           |                         |    Easy    |
 |  110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)                                                                       |                         |    Easy    |
@@ -81,7 +81,7 @@
 |  148 | [Sort List](https://leetcode.com/problems/sort-list)                                                                                             |                         |   Medium   |
 |  149 | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                                       |                         |    Hard    |
 |  151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)                                                             |                         |   Medium   |
-|  155 | [Min Stack](https://leetcode.com/problems/min-stack)                                                                                             |                         |    Easy    |
+|  155 | [Min Stack](https://leetcode.com/problems/min-stack)                                                                                             |   :white_check_mark:    |    Easy    |
 |  160 | [Intersection of Two linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists)                                               |                         |    Easy    |
 |  162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element)                                                                             |                         |   Medium   |
 |  167 | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)                                             |                         |    Easy    |
@@ -105,7 +105,7 @@
 |  196 | [Delete Duplicate Emails](https://leetcode.com/problems/delete-duplicate-emails)                                                                 |                         |    Easy    |
 |  197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature)                                                                           |                         |    Easy    |
 |  198 | [House Robber](https://leetcode.com/problems/house-robber)                                                                                       |                         |    Easy    |
-|  200 | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                             |                         |   Medium   |
+|  200 | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                             |   :white_check_mark:    |   Medium   |
 |  202 | [Happy Number](https://leetcode.com/problems/happy-number)                                                                                       |                         |    Easy    |
 |  203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)                                                         |                         |    Easy    |
 |  204 | [Count Primes](https://leetcode.com/problems/count-primes)                                                                                       |                         |    Easy    |
@@ -121,7 +121,7 @@
 |  235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)                   |                         |    Easy    |
 |  236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                                 |                         |   Medium   |
 |  237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list)                                                       |                         |    Easy    |
-|  238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                                       |                         |   Medium   |
+|  238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                                       |   :white_check_mark:    |   Medium   |
 |  239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum)                                                                   |                         |    Hard    |
 |  240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii)                                                                     |                         |   Medium   |
 |  242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram)                                                                                     |                         |    Easy    |
@@ -172,8 +172,8 @@
 |  516 | [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence)                                                 |                         |   Medium   |
 |  518 | [Coin Change 2](https://leetcode.com/problems/coin-change-2)                                                                                     |                         |   Medium   |
 |  520 | [Detect Capital](https://leetcode.com/problems/detect-capital)                                                                                   |                         |    Easy    |
-|  525 | [Contiguous Array](https://leetcode.com/problems/contiguous-array)                                                                               |                         |   Medium   |
-|  543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)                                                                 |                         |    Easy    |
+|  525 | [Contiguous Array](https://leetcode.com/problems/contiguous-array)                                                                               |   :white_check_mark:    |   Medium   |
+|  543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)                                                                 |   :white_check_mark:    |    Easy    |
 |  559 | [Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree)                                                         |                         |    Easy    |
 |  560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)                                                                     |                         |   Medium   |
 |  572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree)                                                                 |                         |    Easy    |
