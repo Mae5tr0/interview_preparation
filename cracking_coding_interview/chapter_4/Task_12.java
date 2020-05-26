@@ -1,13 +1,9 @@
 package chapter_4;
 
-import apple.laf.JRSUIUtils;
-import edu.princeton.cs.algs4.In;
 import structures.BinaryTree;
-//import structures.HashMap;
 import structures.LinkedList;
 
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Paths with Sum
