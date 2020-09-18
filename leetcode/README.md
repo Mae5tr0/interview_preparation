@@ -139,9 +139,9 @@
 |  303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable)                                                           |                         |    Easy    |
 |  309 | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown)                     |                         |   Medium   |
 |  326 | [Power of Three](https://leetcode.com/problems/power-of-three)                                                                                   |                         |    Easy    |
-|  328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list)                                                                       |                         |   Medium   |
+|  328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list)                                                                       |   :white_check_mark:    |   Medium   |
 |  342 | [Power of Four](https://leetcode.com/problems/power-of-four)                                                                                     |                         |    Easy    |
-|  344 | [Reverse String](https://leetcode.com/problems/reverse-string)                                                                                   |                         |    Easy    |
+|  344 | [Reverse String](https://leetcode.com/problems/reverse-string)                                                                                   |   :white_check_mark:    |    Easy    |
 |  347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                                                                 |                         |   Medium   |
 |  349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)                                                           |                         |    Easy    |
 |  350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii)                                                     |                         |    Easy    |
