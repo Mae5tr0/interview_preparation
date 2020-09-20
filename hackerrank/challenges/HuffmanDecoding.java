@@ -9,7 +9,7 @@ public class HuffmanDecoding {
             root = insert(root, i);
         }
 
-        System.out.println(decode(root));
+//        System.out.println(decode(root));
     }
 
     static class Node {
@@ -23,7 +23,6 @@ public class HuffmanDecoding {
     }
 
     void decode(String s, Node root) {
-
 
     }
 
